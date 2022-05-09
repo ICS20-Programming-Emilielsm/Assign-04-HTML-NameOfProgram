@@ -7,70 +7,81 @@
     <meta name="keywords" content="immaculata, ics2o">
     <meta name="author" content="Emilie">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="./fav/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./fav/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./fav/favicon-16x16.png">
     <link rel="manifest" href="./fav/site.webmanifest">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Cakes and their price</title>
+    <title>Cakes and Their Price</title>
   </head>
   <body>
+    
     <!-- Calling java script file -->
     <script src="./js/script.js"></script>
 	  <center>
-    <h1>Cakes and their price</h1>
-		<table>
-			<tr align = "center">
-				<td valign="top" align="right">
-					<h3>This website will let a person price a cake</h3>
+    <h1>Cakes and Costs</h1>
+      
+      <!-- Table for Order -->
+      <table>
+        <form action="javascript:orderSent()">
+          <tr align = "center">
+            <td valign="top" align="right">
+              <h3>This website will let a person price a cake</h3>
+              
+              <!-- Drop down menu options -->
+              <label for="size">size:</label>
+              <select name="size" id="size">
+      					<option value="">--Size--</option>
+      					<option value="Individual">Individual</option>
+      					<option value="Group">Group</option>
+      					<option value="Party">Party</option>
+      				</select>
+              <br>
+              <br>
+              
+              <!-- Label to Select Toppings -->
+              <p>Please select your toppings:</p>
+              
+              <label for="topping">Topping:</label>
+              <select name="topping" id="topping">
+						    <option value="">--Topping--</option>
+						    <option value="icing">Icing</option>
+						    <option value="sprinkles">Sprinkles</option>
+						    <option value="icingBorder">Icing Border</option>
+              </select>
+              <br>
 
-						<!-- Drop down menu options -->
-						<label for="size">size:</label>
-						<select name="size" id="size">
-						    <option value="">--Size--</option>
-						    <option value="Individual">Individual</option>
-						    <option value="Group">Group</option>
-						    <option value="Party">Party</option>
-						</select>
-    </label>
-						<br><br>
-            <p>Please select your toppings:</p>
-            
-            
-            <input type="radio" id="icing" name="icing" value="icing">
-            <label for="icing">icing</label><br>
-            <input type="radio" id="sprinkles" name="sprinkles" value="sprinkles">
-            <label for="sprinkles">Sprinkles</label><br>
-            <input type="radio" id="icingBorder" name="icingBorder" value="icingBorder">
-            <label for="icingBorder">Icing Border</label>
-            
-            <br>
-            <br>
-             <p>Please select your favorite Web language:</p>
-            </lable
-          	<!-- Drop down menu options -->
-						<label for="gift">gift:</label>
-						<select name="gift" id="gift">
-						    <option value="">--Is this a gift--</option>
-						    <option value="yes">yes</option>
-						    <option value="no">no</option>
-						</select>
-						<br><br>
-            <!-- button -->
-						<input type="submit" value="Display Cost">
-					</form>
-				</td>
-				<td valign="top" align="center">
+              <!-- Label to select toppings -->
+              <p>Please select your toppings:</p>
+              <label for="drink">Drink:</label>
+              <select name="drink" id="drink">
+						    <option value="">--Drink--</option>
+						    <option value="water">Water</option>
+						    <option value="icedTea">Iced Tea</option>
+						    <option value="coffee">Coffee</option>
+              </select>
+              <br>
+              <br>
+              
+              <!-- button -->
+              <input type="submit" value="Display Cost">
+        </form>
+      </td>
+        <td valign="top" align="center">
+          <br>
+          
           <!-- image -->
 					<img src="./images/muse.webp" alt="Museum" width="100%">
 				</td>
 			</tr>
 		</table>
-		<!-- Create a space where the user information will be displayed -->
-		<div id="display-results">
-		</div>
-    </div>
-		  </center>
+      
+      <!-- Create a space where the user information will be displayed -->
+      <br>
+      <div id="display-cost">
+      </div>
+    </center>
   </body>
 </html>

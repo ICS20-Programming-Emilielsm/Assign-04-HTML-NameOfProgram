@@ -9,40 +9,62 @@
 /**
  * This function displays the discount depending on age and day of the week.
  */
-function displayCost() {
+function orderSent() {
   // declare constants
   const INDIV_PRICE = 10.00
-  
-  let giftSelected = false
-  let sizePrice = 0
+  const GRP_PRICE = 20.00
+  const PRTY_PRICE = 50.00
+  const ICING_PRICE = 7.00
+  const SPRINKLE_PRICE = 5.00
+  const ICEBORD_PRICE = 15.00
+  const WATR_PRICE = 2.00
+  const ICDTEA_PRICE = 4.00
+  const COFE_PRICE = 4.50
+  const HST = 0.13
+
+  let baseCake = 0
   
   	// initialize variables
-	let subtotal = "Please make a selection above."
+
   	
 	// get age and day of the week	
-	let select = document.getElementById('size');
-	let size = select.options[select.selectedIndex].value;
-  let icing = parseInt(document.getElementById('icing').value)
-  let sprinkles = parseInt(document.getElementById('sprinkles').value)
-  let icingBorder = parseInt(document.getElementById('icingBorder').value)
-  let select = document.getElementById('gift');
-	let gift = select.options[select.selectedIndex].value;
+	let size = document.getElementById('size');
+  let topping = document.getElementById('topping');
+  let drink = document.getElementById('drink');
 
   //find out price
-  if (size == "Individual") {
-		sizePrice = INDIV_PRICE
+  if ((size == "Individual") && (topping == "icing")) {
+		baseCake = INDIV_PRICE + ICING_PRICE
 	}
-	else if (age < 5 || age > 95) {
-		cost = "The cost is FREE for you."
+	else if (size == "Group") {
+		sizePrice = GRP_PRICE
 	}
-	else if ((day == "Tuesday") || (day == "Thursday)") 
-			 || (age >=12) && (age <=21)) {
-		cost = "You get a student discount."
+	else if (size == "Party") {
+		sizePrice = PRTY_PRICE
 	}
-	else if ((age > 0) || (day != "")) {		
-		cost = "You have to pay regular price."
+   else if (size == "icing") {
+		topPrice = ICING_PRICE
 	}
+	else if (size == "sprinkles") {
+		topPrice = SPRINKLE_PRICE
+	}
+	else if (size == "icingBorder") {
+		topPrice = ICEBORD_PRICE
+	}
+  else if (size == "water") {
+		drinkPrice = WATR_PRICE
+	}
+	else if (size == "icedTea") {
+		drinkPrice = ICDTEA_PRICE
+	}
+	else if (size == "coffee") {
+		drinkPrice = COFE_PRICE
+	}
+    
+	let subtotal = baseCake + drinkPrice + topPrice + sizePrice
+  let tax = subtotal * HST
+  let total = subtotal + tax
     	
   	// display the greeting
-  	document.getElementById('display-results').innerHTML = cost
+  document.getElementById("display-cost").innerHTML = "Your subtotal is $" + subtotal.toFixed(2) + ".<br>The amount of HST added is $" + tax.toFixed(2) + ".<br>Your total is $" + total.toFixed(2) + ".";
 }
