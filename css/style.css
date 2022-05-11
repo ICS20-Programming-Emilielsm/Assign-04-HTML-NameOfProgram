@@ -1,16 +1,16 @@
 body {
-	background-color: rgb(89, 136, 92);
+	background-color: rgb(112, 104, 130);
 }
 
 h1 {
-	background-color: rgb(205, 195, 168);
-	color: hsl(0, 0%, 0%);
+	background-color: rgb(238, 236, 231);
+	color: hsl(0, 46%, 66%);
 	padding: 40px;
 	text-align: center;
 }
 
 p {
-	background-color: #655829;
+	background-color: #c7d4e5;
 }
 
 div {

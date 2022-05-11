@@ -14,47 +14,44 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./fav/favicon-16x16.png">
     <link rel="manifest" href="./fav/site.webmanifest">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Cakes and Their Price</title>
+    <title>Tops and Cakes</title>
   </head>
   <body>
     
     <!-- Calling java script file -->
     <script src="./js/script.js"></script>
 	  <center>
-    <h1>Cakes and Costs</h1>
+    <h1>Tops and Costs</h1>
       
-      <!-- Table for Order -->
-      <table>
-        <form action="javascript:orderSent()">
-          <tr align = "center">
-            <td valign="top" align="right">
-              <h3>This website will let a person price a cake</h3>
-              
-              <!-- Drop down menu options -->
+      <!--  Order -->
+            <h3>All flavours are the same. </h3>
+            <!-- Drop down menu options -->
+            <form>
+              <p>Please select your Size:</p>
               <label for="size">size:</label>
               <select name="size" id="size">
       					<option value="">--Size--</option>
       					<option value="Individual">Individual</option>
-      					<option value="Group">Group</option>
-      					<option value="Party">Party</option>
+      					<option value="Group">Group (5)</option>
+      					<option value="Party">Party (10)</option>
       				</select>
               <br>
               <br>
               
               <!-- Label to Select Toppings -->
-              <p>Please select your toppings:</p>
-              
+              <p>Please select your Topping:</p>
               <label for="topping">Topping:</label>
               <select name="topping" id="topping">
 						    <option value="">--Topping--</option>
 						    <option value="icing">Icing</option>
-						    <option value="sprinkles">Sprinkles</option>
-						    <option value="icingBorder">Icing Border</option>
+						    <option value="sprinkles">decor</option>
+						    <option value="icingBorder">Icing Border (comes with icing on cake)</option>
               </select>
+              
               <br>
 
               <!-- Label to select toppings -->
-              <p>Please select your toppings:</p>
+              <p>Please select your Drink:</p>
               <label for="drink">Drink:</label>
               <select name="drink" id="drink">
 						    <option value="">--Drink--</option>
@@ -62,27 +59,27 @@
 						    <option value="icedTea">Iced Tea</option>
 						    <option value="coffee">Coffee</option>
               </select>
-              <br>
-              <br>
               
-              <!-- button -->
-              <input type="submit" value="Display Cost">
-        </form>
-      </td>
-        <td valign="top" align="center">
+            </form>
+              <br>
+              <br>
+        <!-- Accent-colored raised button with ripple -->
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="displayCost()">
+            Button
+          </button>
           <br>
           <br>
           <br>
           <!-- image -->
-					<img src="./images/cake.jpeg" alt="Cake" width="100%">
-				</td>
-			</tr>
-		</table>
-      
+					<img src="./images/cake.jpeg" alt="Cake" width="50%">
       <!-- Create a space where the user information will be displayed -->
       <br>
-      <div id="display-cost">
+      <div id="cost">
       </div>
+      <!-- Colored icon button -->
+        <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+          <i class="material-icons">Thanks</i>
+        </button>
     </center>
   </body>
 </html>
